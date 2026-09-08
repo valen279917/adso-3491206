@@ -32,6 +32,37 @@ body{
 
         }
     }
+    &. css{
+        background: linear-gradient(45deg, black, #663399);
+        background-attachment: fixed;  
+        main{
+            header.mainmenu {
+                img {
+                    heigth: 200px,
+                    width: 200px
+                }
+            }
+            menu.mainmenu {
+                margin-top: 2rem;
+                a:link, a:visited {
+                    span {
+                        background-color: #663399;
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+            }
+        }
+     }
+     section{
+         h2.subtitle{
+         color: #ab7dd9;
+         border-bottom: 2px dotted #ab7dd9;
+        padding-bottom: 0.4rem;
+         }
+    }
+        
+ }
     &.Emmet {
         background: linear-gradient(45deg, black, #7acb16);
         section{
