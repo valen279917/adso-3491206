@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00-template</title>
+    <title>06-Specificity</title>
     <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        button { /*Specificity: 001*/
+            border: none;
+            border-radius: 0.2rem;
+            background-color: #f00;
+            /* background-color: #f00; ! important; */
+            color: #fffd;
+            font-size: 1rem;
+            padding: 0.8rem;
+            display: flex;
+            margin: 2rem auto; 
+        }
+        section button.btn { /*Specificity: 012*/
+            background-color: #ab7dd9  ;
+        }
+    </style>
     </head>
 <body class="css">
     <nav class="back">
@@ -14,12 +30,13 @@
     </nav>
     <main>
         <header class="mainmenu internal">
-        <h1>01-document-style</h1>
+        <h1>06-Specificity</h1>
         <img src="../src/imgs/logo-css.png" alt="css">
-        <h3>Description</h3>
+        <h3>Is score/rank that determines which style declaration is ultimately applied to an element.</h3>
         </header>
         <section>
-          <h2 class="subtitle">Example:</h2>
+             <h2 class="subtitle">Example:</h2>
+             <button class="btn">this is a button</button>
         </section>
         </menu>
     </main>

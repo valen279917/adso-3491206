@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00-template</title>
+    <title>05-Advanced Selectors</title>
     <link rel="stylesheet" href="../src/css/styles.css">
+       <style>
+        ul.fruits > li[class] {
+            background-color: #ff06;
+            padding: 0.2rem;
+        }
+    </style>
     </head>
 <body class="css">
     <nav class="back">
@@ -14,12 +20,23 @@
     </nav>
     <main>
         <header class="mainmenu internal">
-        <h1>01-document-style</h1>
+        <h1>05-Advanced Selectors</h1>
         <img src="../src/imgs/logo-css.png" alt="css">
-        <h3>Description</h3>
+        <ul>
+            <li>Children (>)</li>
+            <li>Adjacent/Sibling (+)</li>
+            <li>Attribute [class]</li>
+        </ul>
         </header>
         <section>
-          <h2 class="subtitle">Example:</h2>
+            <h2 class="subtitle">Example:</h2>
+             <ul class="fruits">
+                <li>🍊 orange</li>
+                <li>🍎 apple</li>
+                <li class="lemon">🍋 lemon</li>
+                <li>🍓 strawberry</li>
+                <li>🍇 grapes</li>
+            </ul>
         </section>
         </menu>
     </main>
