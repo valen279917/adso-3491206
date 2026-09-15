@@ -32,28 +32,233 @@ body{
 
         }
     }
-    &. css{
+    /* fonts: poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    background: linear-gradient(45deg, black , skyblue); 
+    color : #fffc;
+    font-family: Poppins;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    nav.back{
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        a:link, a:visited {
+            background-color: #fff3;
+            border: 2px solid white;
+            border-radius: 50%;
+            height: 34px;
+            display: flex;
+            padding: 0.4rem;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            color:white ;
+            transform: scale(0.8) ;   
+            transition: all 0.4s ease-in;
+            &:hover{
+                transform: scale(1);
+            }
+        }
+    }
+    &.css {
         background: linear-gradient(45deg, black, #663399);
-        background-attachment: fixed;  
-        main{
-            header.mainmenu {
-                img {
-                    heigth: 200px;
-                    width: 200px;
+        background-attachment: fixed;
+         section{
+            margin: 2rem auto;
+            h2.subtitle{
+                color: white;
+                border-bottom: 2px dotted white;
+                padding-bottom: 0.4rem;
+                small {
+                    color: #fff;
+                    font-size: 0.9rem;
+                    font-weight: 400;
                 }
             }
+            h3 {
+                color: white;
+                margin: 0;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            xmp {
+                background-color: #0009;
+                border-radius: 8px;
+                padding: 0.6rem;
+                margin: 0;
+            }
+        }
+    }
+    &.Emmet {
+        background: linear-gradient(45deg, black, #7acb1a);
+        section{
+            h2.subtitle{
+                color: #7acb1a;
+                border-bottom: 2px dotted #7acb1a;
+                padding-bottom: 0.4rem;
+                small {
+                    color: #fff;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                }
+            }
+            h3 {
+                color: #7acb1a;
+                margin: 0;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            xmp {
+                background-color: #0009;
+                border-radius: 8px;
+                padding: 0.6rem;
+                margin: 0;
+            }
+        }
+    }
+    &.html {
+      background: linear-gradient(45deg, black , #e44d26);
+        main{
             menu.mainmenu {
-                margin-top: 2rem;
                 a:link, a:visited {
-                    span {
-                        background-color: #663399;
+                    span{
+                        background-color: white;
                         height: 50px;
                         width: 50px;
+                    }
+                    aside{
+                        h4{
+                            font-size: 1.2rem;
+                        }
                     }
                 }
             }
         }
-     }
+        section{
+            h2.subtitle{
+                color: orange;
+                border-bottom: 2px dotted orange;
+                padding-bottom: 0.4rem;
+            }
+        }
+    }
+    main{
+        background: linear-gradient(#0006 , #0000);
+        border-radius: 0.4rem;
+        padding: 1rem;
+        header.mainmenu{
+            & internal{
+                h1{
+                    fzont-size: 2rem;
+                }
+                img{
+                    height: 120px;
+                    width: 120px;
+                }
+            }
+            h1{ 
+                color: #fffc;
+                border-bottom: 2px solid #fffc;
+                font-size: 3.6rem;
+                font-weight: 700;
+                text-align: center;
+                margin: 0;
+            }
+            img {
+                height: 280px;
+                width: 280px;
+                display: flex;
+                border: 4px solid #fffc;
+                object-fit: cover;
+                margin: 2rem auto;
+                border-radius: 50%;
+            }
+            h2{
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 0;
+            }
+            h3{
+                font-size: 1rem;
+                font-weight: 300;
+                text-align: center;
+                margin: 0;
+            }
+            h4, h5 {
+                font-size: 0.8rem;
+                font-weight 200;
+                text-align: center;
+                margin: 0;
+            }
+            }
+            menu.mainmenu {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+                align-content: center;
+                a:link, a:visited {
+                    color: black;
+                    border-radius: 5rem;
+                    background-color: #fff9;
+                    width: 320px;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    padding: 0.6rem;
+                    text-decoration: none;
+                    transition: all 0.4s ease-in;
+                    &:hover{
+                        background-color: #fffc;
+                        transform: scale(1.04);
+                    }
+                    span{
+                        background-color: #fffc;
+                        border-radius: 50%;
+                        display: flex;
+                        font-size: 1.4rem ;
+                        justify-content: center;
+                        align-items: center;
+                        height: 60px;
+                        width: 60px;
+                    }
+                    aside{
+                        color: #000c;
+                        margin-left: 0.6rem;
+                        h4{
+                            margin: 0;
+                            font-size: 1.4rem;
+                            font-weight: 400;
+                         small{
+                            #0009
+                            margin: 0;
+                            font-size: 0.7rem;
+                            font-weight: 300;
+                        
+                            }
+                        }
+                    }
+                }
+            }
+            section{
+                background-color: #0009;
+                border-radius: 0.4rem;
+                margin-top: 1rem;
+                padding: 1rem;
+                min-height: 200px;
+                width: 380px;
+            }
+        }
+}
      section{
          h2.subtitle{
          color: #ab7dd9;
