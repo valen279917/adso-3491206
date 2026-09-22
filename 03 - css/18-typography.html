@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-typography</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        /* Contenedor general para los ejemplos */
+.contenedor-ejemplo {
+    border: 1px solid #555;
+    padding: 15px;
+    background-color: #3a3a3a;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+.contenedor-ejemplo p {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* --- 1. FAMILIAS TIPOGRÁFICAS --- */
+.tipo-serif {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.tipo-sans {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tipo-mono {
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* --- 2. TAMAÑOS DE LETRA --- */
+.texto-pequeno {
+    font-size: 0.8em; /* 80% del tamaño normal */
+}
+
+.texto-normal {
+    font-size: 1em; /* Tamaño normal */
+}
+
+.texto-grande {
+    font-size: 2em; /* Doble del tamaño normal */
+}
+
+.texto-xxl {
+    font-size: 3em; /* Triple del tamaño normal */
+}
+
+/* --- 3. GROSOR Y ESTILO --- */
+.texto-normal-weight {
+    font-weight: normal;
+}
+
+.texto-negrita {
+    font-weight: bold;
+}
+
+.texto-mas-negrita {
+    font-weight: 900; /* Máximo grosor */
+}
+
+.texto-cursiva {
+    font-style: italic;
+}
+
+.texto-oblicua {
+    font-style: oblique;
+}
+
+/* --- 4. PROPIEDAD SHORTHAND --- */
+/* font: estilo grosor tamaño/altura familia; */
+.texto-shorthand {
+    font: italic bold 1.2em/1.5 Arial, sans-serif;
+    color: #f1c40f; /* Amarillo para resaltar */
+}
+    </style>
+    </head>
+<body class="css">
+    <nav class="back">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mainmenu internal">
+        <h1>18-typography</h1>
+        <img src="../src/imgs/logo-css.png" alt="css">
+        <ul>
+                <li>Color</li>
+                <li>Family</li>
+                <li>Size</li>
+                <li>Weight</li>
+            </ul>
+        </header>
+        <section>
+              <h2 class="subtitle">Example:</h2> 
+    
+    <!-- 1. FAMILIAS TIPOGRÁFICAS -->
+    <h3>1. Familias Tipográficas (font-family)</h3>
+    <div class="contenedor-ejemplo">
+        <p class="tipo-serif">Este texto usa una fuente <strong>Serif</strong> (Times New Roman). Tienen terminaciones en las letras.</p>
+        <p class="tipo-sans">Este texto usa una fuente <strong>Sans-Serif</strong> (Arial). No tienen terminaciones, son más limpias.</p>
+        <p class="tipo-mono">Este texto usa una fuente <strong>Monospace</strong> (Courier). Todas las letras ocupan el mismo ancho.</p>
+    </div>
+
+    <!-- 2. TAMAÑOS DE LETRA -->
+    <h3>2. Tamaños de Letra (font-size)</h3>
+    <div class="contenedor-ejemplo">
+        <p class="texto-pequeno">Texto pequeño (font-size: 0.8em)</p>
+        <p class="texto-normal">Texto normal (font-size: 1em - por defecto)</p>
+        <p class="texto-grande">Texto grande (font-size: 2em)</p>
+        <p class="texto-xxl">Texto muy grande (font-size: 3em)</p>
+    </div>
+
+    <!-- 3. GROSOR Y ESTILO -->
+    <h3>3. Grosor (font-weight) y Estilo (font-style)</h3>
+    <div class="contenedor-ejemplo">
+        <p class="texto-normal-weight">Texto con grosor normal (font-weight: normal)</p>
+        <p class="texto-negrita">Texto en negrita (font-weight: bold)</p>
+        <p class="texto-mas-negrita">Texto extra negrita (font-weight: 900)</p>
+        <p class="texto-cursiva">Texto en cursiva (font-style: italic)</p>
+        <p class="texto-oblicua">Texto oblicuo (font-style: oblique)</p>
+    </div>
+
+    <!-- 4. PROPIEDAD SHORTHAND -->
+    <h3>4. Propiedad Shorthand (font)</h3>
+    <div class="contenedor-ejemplo">
+        <p class="texto-shorthand">Este texto usa la propiedad <strong>font</strong> para definir estilo, grosor, tamaño y familia en una sola línea.</p>
+    </div>
+        </section>
+        </menu>
+    </main>
+</body>
+</html>
+
+
+    

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-visualization</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        .contenedor-ejemplo {
+    border: 1px solid #555;
+    padding: 15px;
+    background-color: #3a3a3a;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+.contenedor-ejemplo p {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+/* --- 1. DISPLAY --- */
+.caja-bloque {
+    background-color: #3498db; /* Azul */
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.caja-inline {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Cambiando display: block */
+.span-block {
+    display: block; /* De inline a bloque */
+    background-color: #27ae60; /* Verde */
+    color: white;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+/* Cambiando display: inline */
+.div-inline {
+    display: inline; /* De bloque a inline */
+    background-color: #9b59b6; /* Morado */
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Ocultando con display: none */
+.display-none {
+    display: none; /* No se muestra y NO ocupa espacio */
+}
+
+
+/* --- 2. VISIBILITY --- */
+.oculto-visibility {
+    visibility: hidden; /* Oculto pero SÍ ocupa espacio */
+}
+
+
+/* --- 3. OVERFLOW --- */
+.caja-overflow, .caja-overflow-hidden {
+    width: 250px;
+    height: 80px;
+    border: 1px solid #888;
+    background-color: #2c2c2c;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    color: #ccc;
+}
+
+.caja-overflow {
+    overflow: scroll; /* Muestra barras de desplazamiento */
+}
+
+.caja-overflow-hidden {
+    overflow: hidden; /* Corta el contenido sobrante */
+}
+
+/* Estilo para los textos pequeños de ayuda */
+small {
+    color: #aaa;
+    font-weight: normal;
+}
+    </style>
+    </head>
+<body class="css">
+    <nav class="back">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mainmenu internal">
+        <h1>17-visualization</h1>
+        <img src="../src/imgs/logo-css.png" alt="css">
+        <ul>
+                <li>Display: block|inline|none|flex|grid</li>
+                <li>Visibility: visible|hidden</li>
+                <li>Overflow: visible|hidden|scroll|auto</li>
+                <li>Z-Index: 1...n</li>
+            </ul>
+        </header>
+        <section>
+          <h2 class="subtitle">Example:</h2> 
+    
+    <!-- 1. PROPIEDAD DISPLAY -->
+    <h3>1. Propiedad Display</h3>
+    <div class="contenedor-ejemplo">
+        <p>Elementos por defecto:</p>
+        <div class="caja-bloque">Soy un DIV (block por defecto)</div>
+        <span class="caja-inline">Soy un SPAN (inline por defecto)</span>
+        <span class="caja-inline">Soy otro SPAN</span>
+        
+        <p>Cambiando el display:</p>
+        <span class="span-block">Soy un SPAN con display: block (ocupa toda la línea)</span>
+        <div class="div-inline">Soy un DIV con display: inline (solo ocupa su contenido)</div>
+        <div class="div-inline">Soy otro DIV inline</div>
+        
+        <p>Ocultando con display: none:</p>
+        <div class="caja-bloque display-none">No me ves, no ocupo espacio</div>
+        <div class="caja-bloque">Estoy pegado al de arriba</div>
+    </div>
+
+    <!-- 2. PROPIEDAD VISIBILITY -->
+    <h3>2. Propiedad Visibility</h3>
+    <div class="contenedor-ejemplo">
+        <p>Este texto es visible.</p>
+        <p class="oculto-visibility">Este texto está oculto con visibility: hidden (¡pero deja un hueco!).</p>
+        <p>Este texto está después del hueco.</p>
+    </div>
+
+    <!-- 3. PROPIEDAD OVERFLOW -->
+    <h3>3. Propiedad Overflow</h3>
+    <div class="contenedor-ejemplo">
+        <div class="caja-overflow">
+            Este es un texto muy largo que no cabe en la caja. 
+            Este es un texto muy largo que no cabe en la caja. 
+            Este es un texto muy largo que no cabe en la caja. 
+            Este es un texto muy largo que no cabe en la caja. 
+            Este es un texto muy largo que no cabe en la caja. 
+        </div>
+        <p><small>La caja de arriba tiene <strong>overflow: scroll</strong> (barras de desplazamiento).</small></p>
+        
+        <div class="caja-overflow-hidden">
+            Este es un texto muy largo que no cabe en la caja. 
+            Este es un texto muy largo que no cabe en la caja. 
+            Este es un texto muy largo que no cabe en la caja. 
+            Este es un texto muy largo que no cabe en la caja. 
+            Este es un texto muy largo que no cabe en la caja. 
+        </div>
+        <p><small>La caja de arriba tiene <strong>overflow: hidden</strong> (corta el texto sobrante).</small></p>
+    </div>
+        </section>
+        </menu>
+    </main>
+</body>
+</html>
+
+
+    

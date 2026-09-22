@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-position</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        /* =========================================
+           PUNTO 15: POSITION (Estilo Mejorado)
+           ========================================= */
+        
+        /* Estilo de las tarjetas contenedoras */
+        .tarjeta-ejemplo {
+            background-color: #2c2c2c;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .tarjeta-ejemplo h3 {
+            margin-top: 0;
+            color: #61dafb; /* Azul claro */
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+
+        .descripcion {
+            color: #aaa;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .descripcion code {
+            background-color: #444;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #f1c40f;
+        }
+
+        /* Zona donde se hacen las pruebas */
+        .zona-prueba {
+            background-color: #3a3a3a;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px dashed #555;
+            position: relative; /* Clave para el posicionamiento absoluto */
+            min-height: 180px;
+        }
+
+        /* Estilo base de todas las cajas */
+        .caja {
+            width: 80px;
+            height: 80px;
+            background-color: #3498db; /* Azul */
+            color: white;
+            text-align: center;
+            line-height: 80px; /* Centra el texto verticalmente */
+            margin: 5px;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* --- 1. STATIC (Normal) --- */
+        /* No necesita propiedades especiales, es el flujo por defecto */
+
+        /* --- 2. RELATIVE --- */
+        .caja-relative {
+            position: relative;
+            top: 15px;   /* Se mueve 15px hacia abajo */
+            left: 15px;  /* Se mueve 15px a la derecha */
+            background-color: #e74c3c; /* Rojo */
+            line-height: 1.2; 
+            padding-top: 20px; 
+            height: 60px;
+        }
+
+        /* --- 3. ABSOLUTE --- */
+        .caja-absolute {
+            position: absolute;
+            top: 40px;   /* Se posiciona 40px desde arriba del contenedor */
+            left: 40px;  /* Se posiciona 40px desde la izquierda del contenedor */
+            background-color: #f1c40f; /* Amarillo */
+            color: black;
+            z-index: 10; /* Asegura que quede por encima */
+        }
+
+        /* --- 4. FIXED --- */
+        .caja-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 120px;
+            height: 60px;
+            background-color: #9b59b6; /* Morado */
+            color: white;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            z-index: 1000;
+            font-size: 14px;
+        }
+
+        /* --- 5. STICKY --- */
+        .contenedor-sticky {
+            height: 200px;
+            overflow-y: scroll;
+            border: 1px solid #555;
+            padding: 10px;
+            background-color: #2a2a2a;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .caja-sticky {
+            position: sticky;
+            top: 0; /* Se pega al borde superior del contenedor */
+            background-color: #27ae60; /* Verde */
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+            z-index: 5;
+            margin-bottom: 10px;
+        }
+
+        .contenedor-sticky p {
+            margin-top: 15px;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body class="css">
+    <nav class="back">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mainmenu internal">
+            <h1>15-position</h1>
+            <img src="../src/imgs/logo-css.png" alt="css">
+            <ul>
+                <li>Normal/Static</li>
+                <li>Relative</li>
+                <li>Absolute</li>
+                <li>Fixed</li>
+                <li>Sticky</li>
+            </ul>
+        </header>
+        <section>
+            <h2 class="subtitle">Example:</h2> 
+            
+            <!-- 1. STATIC -->
+            <div class="tarjeta-ejemplo">
+                <h3>1. Posicionamiento Normal / Static</h3>
+                <p class="descripcion">Es el comportamiento por defecto. Las cajas se colocan una al lado de la otra (si son inline) o una debajo de otra (si son bloque). <code>position: static;</code></p>
+                <div class="zona-prueba">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja">Caja 2 (Static)</div>
+                    <div class="caja">Caja 3</div>
+                </div>
+            </div>
+
+            <!-- 2. RELATIVE -->
+            <div class="tarjeta-ejemplo">
+                <h3>2. Posicionamiento Relativo</h3>
+                <p class="descripcion">Se mueve respecto a donde debería estar originalmente, pero <strong>deja su espacio vacío</strong>. <code>position: relative;</code></p>
+                <div class="zona-prueba">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja caja-relative">Caja 2<br>(Relative)</div>
+                    <div class="caja">Caja 3</div>
+                </div>
+            </div>
+
+            <!-- 3. ABSOLUTE -->
+            <div class="tarjeta-ejemplo">
+                <h3>3. Posicionamiento Absoluto</h3>
+                <p class="descripcion">Sale del flujo normal y se posiciona respecto a su contenedor padre (el que tiene <code>position: relative;</code>). Las demás cajas se mueven para ocupar su lugar. <code>position: absolute;</code></p>
+                <div class="zona-prueba">
+                    <div class="caja">Caja 1</div>
+                    <div class="caja caja-absolute">Caja 2<br>(Absolute)</div>
+                    <div class="caja">Caja 3</div>
+                </div>
+            </div>
+
+            <!-- 4. FIXED -->
+            <div class="tarjeta-ejemplo">
+                <h3>4. Posicionamiento Fijo</h3>
+                <p class="descripcion">Se queda pegado a la pantalla del navegador. No importa cuánto hagas scroll, siempre estará en el mismo lugar. <code>position: fixed;</code></p>
+                <div class="zona-prueba">
+                    <p style="color: #aaa; text-align: center; padding-top: 50px;">Mira la esquina inferior derecha de tu pantalla. 👉</p>
+                </div>
+            </div>
+
+            <!-- 5. STICKY -->
+            <div class="tarjeta-ejemplo">
+                <h3>5. Posicionamiento Sticky</h3>
+                <p class="descripcion">Se comporta como <code>relative</code> hasta que llega a una posición específica (ej. <code>top: 0</code>), entonces se queda pegado como <code>fixed</code> dentro de su contenedor. <code>position: sticky;</code></p>
+                <div class="contenedor-sticky">
+                    <div class="caja-sticky">Soy Sticky (baja el scroll dentro de esta caja)</div>
+                    <p>Mucho texto de relleno para hacer scroll...</p>
+                    <p>Mucho texto de relleno para hacer scroll...</p>
+                    <p>Mucho texto de relleno para hacer scroll...</p>
+                    <p>Mucho texto de relleno para hacer scroll...</p>
+                    <p>Mucho texto de relleno para hacer scroll...</p>
+                    <p>Mucho texto de relleno para hacer scroll...</p>
+                    <p>Mucho texto de relleno para hacer scroll...</p>
+                    <p>Mucho texto de relleno para hacer scroll...</p>
+                    <p>Mucho texto de relleno para hacer scroll...</p>
+                    <p>Mucho texto de relleno para hacer scroll...</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    
+    <!-- La caja Fixed va fuera del main para que flote sobre todo -->
+    <div class="caja-fixed">Soy Fixed</div>
+</body>
+</html>

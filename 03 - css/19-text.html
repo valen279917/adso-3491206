@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19-text</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        .contenedor-ejemplo {
+    border: 1px solid #555;
+    padding: 15px;
+    background-color: #3a3a3a;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+.contenedor-ejemplo p {
+    margin-bottom: 10px;
+}
+
+/* --- 1. ALINEACIÓN --- */
+.texto-izquierda { text-align: left; }
+.texto-derecha { text-align: right; }
+.texto-centro { text-align: center; }
+.texto-justificado { text-align: justify; }
+
+/* --- 2. DECORACIÓN Y TRANSFORMACIÓN --- */
+.texto-subrayado { text-decoration: underline; }
+.texto-tachado { text-decoration: line-through; }
+.texto-overline { text-decoration: overline; }
+
+.texto-mayusculas { text-transform: uppercase; }
+.texto-minusculas { text-transform: lowercase; }
+.texto-capitalizado { text-transform: capitalize; }
+
+/* --- 3. SANGRÍA Y ESPACIADO --- */
+.texto-sangria {
+    text-indent: 2em; /* Sangría de 2 "emes" en la primera línea */
+}
+
+.texto-espaciado {
+    letter-spacing: 3px; /* Espacio entre letras */
+    word-spacing: 8px;   /* Espacio entre palabras */
+}
+
+/* --- 4. INTERLINEADO --- */
+.texto-interlineado {
+    line-height: 2; /* Doble de espacio entre líneas */
+}
+    </style>
+    </head>
+<body class="css">
+    <nav class="back">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mainmenu internal">
+        <h1>19-text</h1>
+        <img src="../src/imgs/logo-css.png" alt="css">
+        <ul>
+                <li>Align</li>
+                <li>Line Height</li>
+                <li>Decoration</li>
+                <li>Transform</li>
+                <li>Indent</li>
+                <li>Spacing (word/letter)</li>
+            </ul>
+        </header>
+        <section>
+          <h2 class="subtitle">Example:</h2> 
+    
+    <!-- 1. ALINEACIÓN -->
+    <h3>1. Alineación del Texto (text-align)</h3>
+    <div class="contenedor-ejemplo">
+        <p class="texto-izquierda">Texto alineado a la izquierda (por defecto).</p>
+        <p class="texto-derecha">Texto alineado a la derecha.</p>
+        <p class="texto-centro">Texto centrado.</p>
+        <p class="texto-justificado">Este texto está justificado. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.</p>
+    </div>
+
+    <!-- 2. DECORACIÓN Y TRANSFORMACIÓN -->
+    <h3>2. Decoración (text-decoration) y Transformación (text-transform)</h3>
+    <div class="contenedor-ejemplo">
+        <p class="texto-subrayado">Texto subrayado (underline)</p>
+        <p class="texto-tachado">Texto tachado (line-through)</p>
+        <p class="texto-overline">Texto con línea superior (overline)</p>
+        <p class="texto-mayusculas">este texto se transformará a mayúsculas</p>
+        <p class="texto-minusculas">ESTE TEXTO SE TRANSFORMARÁ A MINÚSCULAS</p>
+        <p class="texto-capitalizado">este texto se capitalizará cada palabra</p>
+    </div>
+
+    <!-- 3. SANGRÍA Y ESPACIADO -->
+    <h3>3. Sangría (text-indent) y Espaciado (letter/word-spacing)</h3>
+    <div class="contenedor-ejemplo">
+        <p class="texto-sangria">Este párrafo tiene una sangría en la primera línea (text-indent: 2em). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum.</p>
+        <p class="texto-espaciado">Este texto tiene espaciado entre letras (letter-spacing: 3px) y palabras (word-spacing: 8px).</p>
+    </div>
+
+    <!-- 4. INTERLINEADO -->
+    <h3>4. Interlineado (line-height)</h3>
+    <div class="contenedor-ejemplo">
+        <p class="texto-interlineado">Este texto tiene un interlineado amplio (line-height: 2). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+    </div>
+        </section>
+        </menu>
+    </main>
+</body>
+</html>
+
+
+    

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-float</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        .contenedor-ejemplo {
+    border: 1px solid #555;
+    padding: 15px;
+    background-color: #3a3a3a;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+    /* overflow: auto;  <- Opcional: otra forma de limpiar floats */
+}
+
+/* Imagen que flota a la izquierda */
+.imagen-flotante-izq {
+    float: left;
+    width: 120px; /* Ajusta el tamaño según tu imagen */
+    margin-right: 15px; /* Separación del texto */
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Imagen que flota a la derecha */
+.imagen-flotante-der {
+    float: right;
+    width: 120px; /* Ajusta el tamaño según tu imagen */
+    margin-left: 15px; /* Separación del texto (ahora es a la izquierda) */
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Clase para limpiar el float (evita que los elementos se suban) */
+.clear-float {
+    clear: both;
+}
+
+/* Estilo para los párrafos dentro de los ejemplos */
+.contenedor-ejemplo p {
+    line-height: 1.5;
+    margin-top: 0;
+}
+    </style>
+    </head>
+<body class="css">
+    <nav class="back">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mainmenu internal">
+        <h1>16-float</h1>
+        <img src="../src/imgs/logo-css.png" alt="css">
+        <h3>Pushes the element to either the left or right side.</h3>
+        </header>
+        <section>
+          <h2 class="subtitle">Example:</h2> 
+    
+    <h3>1. Float a la izquierda (Texto fluye alrededor)</h3>
+    <div class="contenedor-ejemplo">
+        <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+        <img src="../src/imgs/logo-css.png" alt="Logo CSS" class="imagen-flotante-izq">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Esta imagen tiene un <strong>float: left</strong>, lo que hace que el texto fluya a su alrededor. 
+            Es una técnica clásica para maquetación de revistas o periódicos. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Vestibulum dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+        </p>
+        <div class="clear-float"></div> <!-- Limpia el float -->
+        <p>Este párrafo está debajo porque se ha aplicado un <strong>clear: both</strong> al div anterior.</p>
+    </div>
+
+    <h3>2. Float a la derecha</h3>
+    <div class="contenedor-ejemplo">
+        <img src="../src/imgs/logo-css.png" alt="Logo CSS" class="imagen-flotante-der">
+        <p>
+            Aquí la imagen tiene un <strong>float: right</strong>. 
+            El texto fluye hacia el lado izquierdo de la imagen.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="clear-float"></div>
+    </div>
+        </section>
+        </menu>
+    </main>
+</body>
+</html>
+
+
+    
