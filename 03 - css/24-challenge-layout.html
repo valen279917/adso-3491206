@@ -10,6 +10,7 @@
             border: 10px solid #fff;
             background-color: #17a053;
             min-height: 100dvh;
+
             main {
                 header {
                     figure.logo {
@@ -17,16 +18,123 @@
                         background-position: -25px -420px;
                         height: 140px;
                         margin: 2rem auto;
-                        width: 160px; 
+                        width: 160px;
                     }
                 }
             }
         }
+
         div.menu {
             text-align: center;
             background-color: #fff9;
-            }
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            gap: 30px;
+        }
+        a.boton {
+            color: #17a053;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            border-bottom: 3px solid transparent;
         
+        }
+
+        a.boton:hover {
+            background-color: black;
+            border-bottom: 3px solid #f1c40f;
+        }
+
+        .galeria-productos {
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            background-color: #17a060;
+        }
+
+        .tarjeta-producto {
+            width: 290px;
+            border-radius: 5px;
+            text-align: center;
+
+        }
+        .img-producto {
+            width: 100%;
+            height: 180px;
+            background-image: url(imgs/spriteweb.png);
+            background-repeat: no-repeat;
+            background-position: -470px -22px;
+        }
+        .tarjeta-producto {
+            color: #17a053;
+            padding: 12px 10px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            background-color: #fff9;
+        
+        }
+        .seccion-contenido {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border: 6px solid #17a040;
+            padding: 20px;
+            box-shadow: 15px #fff;
+        }
+
+        .logo-pequeno {
+            float: left;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            background-image: url(imgs/spriteweb.png);
+            background-repeat: no-repeat;
+            background-position: -300px -500px;
+        }
+
+        .imagen-lata-derecha {
+            float: right;
+            width: 100px;
+            height: 140px;
+            margin-left: 20px;
+            background-image: url(imgs/spriteweb.png);
+            background-repeat: no-repeat;
+            background-position: -80px -220px;
+        }
+
+        .seccion-contenido {
+            text-align: justify;
+            line-height: 1.6;
+            font-family: Arial, sans-serif;
+        }
+
+        .seccion-botellas {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .imagen-botellas {
+            background: url(imgs/spriteweb.png) no-repeat;
+            background-position: -520px -430px;
+            height: 180px;
+            margin: 2rem auto;
+            width: 220px;
+        }
     </style>
 </head>
 <body>
@@ -34,14 +142,64 @@
         <header>
             <figure class="logo"></figure>
         </header>
+
         <section>
             <div class="menu">
-                <a href="#" class="boton">Option 1</a>
-                <a href="#" class="boton">Option 2</a>
-                <a href="#" class="boton">Option 3</a>
-                <a href="#" class="boton">Option 4</a>
-                <a href="#" class="boton">Option 5</a>
-                </div>
+                <a href="#" class="boton">Inicio</a>
+                <a href="#" class="boton">Nosotros</a>
+                <a href="#" class="boton">Portafolio</a>
+                <a href="#" class="boton">Servicios</a>
+                <a href="#" class="boton">Contacto</a>
+            </div>
+        </section>
+        <section class="galeria-productos">
+            <div class="tarjeta-producto">
+                <h3>Sprite 01</h3>
+                <div class="img-producto"></div>
+            </div>
+            <div class="tarjeta-producto">
+                <h3>Sprite 02</h3>
+                <div class="img-producto"></div>
+            </div>
+            <div class="tarjeta-producto">
+                <h3>Sprite 03</h3>
+                <div class="img-producto"></div>
+            </div>
+        </section>
+
+        <section class="seccion-contenido">
+            <div class="logo-pequeno"></div>
+            <div class="imagen-lata-derecha"></div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+            </p>
+        </section>
+
+        <section class="seccion-contenido">
+            <div class="logo-pequeno"></div>
+            <div class="imagen-lata-derecha"></div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+            </p>
+        </section>
+        <section class="seccion-contenido">
+            <div class="logo-pequeno"></div>
+            <div class="imagen-lata-derecha"></div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+            </p>
+        </section>
+
+
+        <section class="seccion-botellas">
+            <div class="imagen-botellas"></div>
+            <div class="menu" style=>
+                <a href="#" class="boton">Inicio</a>
+                <a href="#" class="boton">Nosotros</a>
+                <a href="#" class="boton">Portafolio</a>
+                <a href="#" class="boton">Servicios</a>
+                <a href="#" class="boton">Contacto</a>
+            </div>
         </section>
     </main>
 </body>
