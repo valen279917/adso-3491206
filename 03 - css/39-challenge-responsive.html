@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-        * {
+           * {
             transition: all 0.4s ease;
         }
         body {
-            background: linear-gradient(transparent, #767272),
+            background: linear-gradient(transparent, #fff9),
              url(imgs/campo.jpg) no-repeat center top / contain ;
             background-attachment: fixed;
             font-family: sans-serif;
 
             main {
-                background: linear-gradient( transparent 96%);
+                background: linear-gradient( transparent 90%);
                 border-radius: 12px;
                 corner-shape: squircle;
                 padding: 1rem;
@@ -27,7 +24,7 @@
                     width: 480px;
                     display: block;
                     margin: 1rem auto;
-                    animation: 8s animLogo infinite ease;
+                    animation: 3s animLogo infinite ease;
                 }
                 section.characters {
                     margin: 4rem auto;
@@ -66,13 +63,13 @@
                             background-size: 180%;
 
                             figcaption {
-                                color: #fff353;
+                                color: #ff9;
                                 bottom: 0;
                             }
                         }
-                        figcaption {
-                            background-color: #000;
-                            color: #ff8;
+                          figcaption {
+                            background-color: #000b;
+                            color: #fff9;
                             font-size: 1.4rem;
                             border-top: 4px solid #000;
                             position: absolute;
@@ -86,34 +83,34 @@
                     }
                 }
                 section.main-characters {
-                    article {
-                        outline: 4px solid #ff9;
-                        background: #000;
+                    article{
+                        outline: 4px solid #000;
+                        background: #000a;
                         border-radius: 12px;
-                        color: #ff8;
+                        color: #fff9;
                         corner-top-shape: squircle;
                         padding: 1rem;
                         margin: 2rem auto;
                         width: 1388px;
 
-                        display: flex;
-                        align-items: flex-start;
-                        gap: 2rem;
-
+                       img.aside {
+                            display: inline-block;
+                            vertical-align: top;
+                        }
                         img {
                             filter: drop-shadow(0 0 8px #ff9);
                             object-fit: contain;
                             height: 340px;
+                            margin-right: 2rem;
                             width: 340px;
-                            flex-shrink: 0;   
-                            margin-right: 0;
                         }
                         aside {
-                            flex: 1;        
-                            width: auto;
+                            width: 960px;
+                            display: inline-block;
+                            
 
                             h2 {
-                                color: #ff8;
+                                color: #ff9;
                                 margin-top: 0;
                             }
                             p {
@@ -127,7 +124,14 @@
 
                             aside {
                                 h2{
-                                    color: #ff8;
+                                    color: #ff9;
+                                    margin-top: 0;
+                                }
+
+                                p {
+                                    margin: 1rem solid red;
+                                    text-align: justify;
+                                    line-height: 2rem;
                                 }
                             }
                         }
@@ -150,27 +154,31 @@
                     section.characters {
                         width: 718px;
 
+                        
                         figure.character {
-                            margin-bottom: 1rem;
+                        margin-bottom: 1rem;
                         }
                     }
                     section.main-characters {
                         article {
-                            width: 718px;
-                            gap: 1rem;
+                            width: 670px;
 
                             img {
-                                width: 240px;
-                                height: auto;
+                                margin-right: 1rem;
+                                width: 200px;
                             }
-                            aside p {
-                                line-height: 1.8rem;
+                            aside {
+                                width: 480px;
+                                
+                                p {
+                                line-height: 1.6rem;
                             }
                         }
                     }
                 }
             }
         }
+    }
 
         @media (max-width: 780px) {
             body {
@@ -242,7 +250,6 @@
                             width: 100%;
                             margin: 1rem auto;
                             padding: 0.75rem;
-                            flex-direction: column;
                             align-items: center;
                             gap: 1rem;
 
