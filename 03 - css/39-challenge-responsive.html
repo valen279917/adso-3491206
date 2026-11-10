@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        * {
+            transition: all 0.4s ease;
+        }
+        body {
+            background: linear-gradient(transparent, #767272),
+             url(imgs/campo.jpg) no-repeat center top / contain ;
+            background-attachment: fixed;
+            font-family: sans-serif;
+
+            main {
+                background: linear-gradient( transparent 96%);
+                border-radius: 12px;
+                corner-shape: squircle;
+                padding: 1rem;
+                min-height: 100dvh;
+
+                img.logo {
+                    width: 480px;
+                    display: block;
+                    margin: 1rem auto;
+                    animation: 8s animLogo infinite ease;
+                }
+                section.characters {
+                    margin: 4rem auto;
+                    width: 1440px;
+
+                    figure.character {
+                        border-radius: 12px;
+                        outline: 4px solid #000;
+                        corner-shape: squircle;
+                        height: 260px;
+                        display: inline-block;
+                        overflow: hidden;
+                        padding: 0;
+                        position: relative;
+                        transition: all 5s ease;
+                        margin: 0 0.5rem;
+                        width: 340px;
+
+                        &.character01 {
+                            background: url(imgs/bruja\ calamidad.jpeg) no-repeat;
+                            background-position: 50% 30%;
+                        }
+                        &.character02 {
+                            background: url(imgs/calcifer.jpeg) no-repeat;
+                            background-position: 50% 50%;
+                        }
+                        &.character03 {
+                            background: url(imgs/niñoo.jpeg) no-repeat;
+                            background-position: 40% 50% ;
+                        }
+                        &.character04 {
+                            background: url(imgs/cabeza\ de\ cebolla.jpeg) no-repeat;
+                            background-position: 50% 20%;
+                        }
+                        &:hover {
+                            background-size: 180%;
+
+                            figcaption {
+                                color: #fff353;
+                                bottom: 0;
+                            }
+                        }
+                        figcaption {
+                            background-color: #000;
+                            color: #ff8;
+                            font-size: 1.4rem;
+                            border-top: 4px solid #000;
+                            position: absolute;
+                            bottom: -3rem;
+                            margin: 0;
+                            backdrop-filter: blur(4px);
+                            padding: 1rem 1rem 4rem 1rem;
+                            transition: all 0.4s 0.2s ease-out;
+                            width: 100%;
+                        }
+                    }
+                }
+                section.main-characters {
+                    article {
+                        outline: 4px solid #ff9;
+                        background: #000;
+                        border-radius: 12px;
+                        color: #ff8;
+                        corner-top-shape: squircle;
+                        padding: 1rem;
+                        margin: 2rem auto;
+                        width: 1388px;
+
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 2rem;
+
+                        img {
+                            filter: drop-shadow(0 0 8px #ff9);
+                            object-fit: contain;
+                            height: 340px;
+                            width: 340px;
+                            flex-shrink: 0;   
+                            margin-right: 0;
+                        }
+                        aside {
+                            flex: 1;        
+                            width: auto;
+
+                            h2 {
+                                color: #ff8;
+                                margin-top: 0;
+                            }
+                            p {
+                                text-align: justify;
+                                line-height: 2rem;
+                            }
+                        }
+                        &:hover {
+                            background-color: #000c;
+                            backdrop-filter: blur(4px);
+
+                            aside {
+                                h2{
+                                    color: #ff8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @keyframes animLogo {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @media (max-width: 1470px) {
+            body {
+                main {
+                    section.characters {
+                        width: 718px;
+
+                        figure.character {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                    section.main-characters {
+                        article {
+                            width: 718px;
+                            gap: 1rem;
+
+                            img {
+                                width: 240px;
+                                height: auto;
+                            }
+                            aside p {
+                                line-height: 1.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 780px) {
+            body {
+                main {
+                    img.logo {
+                        width: 380px;
+                    }
+                    section.characters {
+                        width: 100%;
+                        max-width: 718px;
+                        text-align: center;
+
+                        figure.character {
+                            width: calc(50% - 1rem);
+                            height: 240px;
+                            margin: 0.5rem;
+                        }
+                    }
+                    section.main-characters {
+                        article {
+                            width: 100%;
+                            max-width: 718px;
+
+                            img {
+                                width: 200px;
+                            }
+                            aside p {
+                                font-size: 1rem;
+                                line-height: 1.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: 600px) {
+            body {
+                background-size: cover;
+
+                main {
+                    padding: 0.5rem;
+
+                    img.logo {
+                        width: 70%;
+                        max-width: 260px;
+                        margin: 0.5rem auto;
+                    }
+
+                    section.characters {
+                        width: 100%;
+                        margin: 1.5rem auto;
+
+                        figure.character {
+                            display: block;
+                            width: 100%;
+                            max-width: 340px;
+                            height: 200px;
+                            margin: 0.75rem auto;
+                            figcaption {
+                                bottom: 0;
+                                padding: 0.6rem 1rem;
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+
+                    section.main-characters {
+                        article {
+                            width: 100%;
+                            margin: 1rem auto;
+                            padding: 0.75rem;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 1rem;
+
+                            img {
+                                width: 160px;
+                                height: auto;
+                                margin: 0 auto;
+                            }
+                            aside {
+                                width: 100%;
+                                flex: none;
+
+                                h2 {
+                                    font-size: 1.3rem;
+                                    text-align: center;
+                                }
+                                p {
+                                    font-size: 0.95rem;
+                                    line-height: 1.5rem;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="css">
+    <main>
+        <img class="logo" src="imgs/logooo.webp" alt="Batman logo">
+        <section class="characters">
+            <figure class="character character01">
+                <figcaption>Bruja Calamidad</figcaption>
+            </figure>
+            <figure class="character character02">
+                <figcaption>Calcifer</figcaption>
+            </figure>
+            <figure class="character character03">
+                <figcaption>tom</figcaption>
+            </figure>
+            <figure class="character character04">
+                <figcaption>Cabeza de navo</figcaption>
+            </figure>
+        </section>
+        <section class="main-characters">
+            <article>
+                <img src="imgs/sophie.jpeg" alt="personaje p1">
+                <aside>
+                    <h2>Sophie</h2>
+                    <p>Batman is the superhero identity of Bruce Wayne, a billionaire living in the fictional city of Gotham. As a child, he witnessed the murder of his parents during a robbery, a traumatic event that shaped his entire life. Instead of using his wealth only for business, he dedicated his fortune and his life to fighting crime. Since he has no superpowers, he relies on his intelligence, physical training, detective skills, and advanced technology to protect Gotham. He operates at night, wearing a bat-inspired suit, and is feared by criminals but seen as a symbol of hope by the people. His mission is to prevent other children from suffering the same loss he did.</p>
+                </aside>
+            </article>
+            <article>
+                <img src="imgs/howl.jpeg" alt="personaje p2">
+                <aside>
+                    <h2>Howl</h2>
+                    <p>The Joker is Batman's greatest enemy and one of the most dangerous villains in Gotham. His true origin is often a mystery, and different stories tell different versions of how he became who he is. He is known for his white skin, green hair, and painted smile. Unlike most criminals, the Joker does not want money or power; he wants to create chaos and prove that anyone can become insane under the right circumstances. He is unpredictable, violent, and finds humor in destruction. His twisted relationship with Batman is central to his character, as he believes the two of them are destined to fight each other forever.</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

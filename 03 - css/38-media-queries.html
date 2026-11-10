@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38-Media Queries</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+       * {
+        transition: all 0.4s ease;
+       }
+       body {
+        background-color: #003675;
+        font-family: Poppins, sans-serif;
+        color: #fff;
+
+        main {
+            border: 4px solid #fff;
+            padding: 1rem;
+            margin: 2rem auto;
+            width: 1230px;
+
+            figure.logo {
+                background: url(imgs/pepsi01.png) no-repeat center;
+                height: 354px;
+                margin: 0 auto;
+                width: 919px;
+            }
+            h2 {
+                display: none;
+                text-align: center;
+            }
+            p {
+                line-height: 2rem;
+                text-align: justify;
+            }
+        }
+    }
+       @media (min-width: 1280px) {
+        body {
+           main {
+            h2:first-of-type { display: block; }
+            } 
+        }
+    }
+    @media (max-width: 1280px) {
+        body {
+            main {
+            h2:nth-of-type(2) { display: block; }
+            width: 750px;
+
+            figure.logo {
+                background: url(imgs/pepsi02.png) no-repeat center;
+                height: 370px;
+                margin: 0 auto;
+                width: 348px;
+                }
+            }
+        }
+    }
+        @media (max-width: 800px) {
+        body {
+            main {
+            h2:last-of-type { display: block; }
+            h2:nth-of-type(2) { display: none; }
+            width: 350px;
+
+            figure.logo {
+                background: url(imgs/pepsi03.png) no-repeat center;
+                height: 156px;
+                margin: 0 auto;
+                width: 162px;
+                }
+            }
+        }
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <figure class="logo"></figure>
+        <h2>Breackpoint: > 1280px <br> (Resolution: Desktop ) </h2>
+        <h2>Breackpoint: < 1280px > 800px <br> (Resolution Tables) </1280px></h2>
+        <h2>Breackpoint: < 800px <br> (Resolution: Mobile) </h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident id reiciendis quae blanditiis dolore aperiam, repellat deleniti odio amet sed rerum cum explicabo consectetur! Facilis amet sed, est dolorum in sint sequi harum at quam dolore corrupti expedita? Voluptas ratione, fuga earum reiciendis perferendis laboriosam magni incidunt culpa. Error eos cumque magnam possimus commodi dolorum iusto. Nihil amet aut, quas excepturi nulla cum perspiciatis voluptate consequatur ducimus a, saepe minus voluptates vel similique veniam! Quia eligendi vero rerum at quis in, aliquam illo ullam consequatur eveniet accusantium itaque alias inventore facere cumque sunt explicabo beatae nemo sint reiciendis facilis quibusdam, aut ipsa ipsam. Alias et placeat ipsa quae voluptas deleniti sequi, doloremque accusamus quasi mollitia, adipisci voluptatem provident eum quisquam sunt! Laborum rerum repellendus porro minima architecto est quis! Laboriosam perferendis harum eos molestiae totam accusamus quo reprehenderit quisquam quas natus fuga, officiis eum, ducimus sit hic magnam voluptates dicta, repellendus illo ipsam sed molestias repudiandae veniam? Deserunt optio in veritatis ad accusantium doloremque recusandae dignissimos mollitia voluptatem impedit? Fugit minima unde sit placeat alias, fuga, numquam, repellat nostrum blanditiis non provident nesciunt quisquam dolorum eius. Eaque exercitationem est expedita laudantium autem excepturi ducimus! Iure, voluptates. Tenetur accusamus dolorum molestias?
+        </p>
+    </main>
+</body>
+</html>
+
